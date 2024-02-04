@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet" />
+    <link href="css/slick-theme.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/require.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900 dark:text-gray-100">
+                    <label for="user_id" class="form-label">User Id : </label>
+                    <input type="text" class="form-control" name="user_id" id="user_id">
+
+                    <button type="button" id="call_btn" class="btn btn-primary">Call</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        let ZegoUIKitPrebuilt;
+
+        require(['js/zegocloudzego-uikit-prebuilt/zego-uikit-prebuilt'], (zegocloudzegoUikitPrebuilt) => {
+            ZegoUIKitPrebuilt = zegocloudzegoUikitPrebuilt.ZegoUIKitPrebuilt;
+        })
+        
+        window.addEventListener('load', () => {
+            document.querySelector('#call_btn').addEventListener('click', invite)
+        })
+
+        function invite() {
+            if(! ZegoUIKitPrebuilt) {
+                console.error('Call UI Kit is not Ready.')
+                return
+            }
+
+            const targetUser = {
+                userID: document.querySelector('#user_id').value,
+            };
+
+            zp.sendCallInvitation({
+                callees: [targetUser],
+                callType: ZegoUIKitPrebuilt.InvitationTypeVideoCall,
+                timeout: 60, // Timeout duration (second). 60s by default, range from [1-600s].
+            }).then((res) => {
+                console.warn(res);
+            })
+            .catch((err) => {
+                console.warn(err);
+            });
+        }
+    </script>
+</body>
+
+</html>

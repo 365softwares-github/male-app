@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "638380778574",
+    "project_id": "flyingshop-560c4",
+    "storage_bucket": "flyingshop-560c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638380778574:android:7fa289d95ca42a2f428f1f",
+        "android_client_info": {
+          "package_name": "com.app.dating_male"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638380778574-rgk798ccp1n993cb797ipd8rk4ggedap.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.flyingshop",
+            "certificate_hash": "783bd9fceb9208985ccf5fa243dc149143f273b4"
+          }
+        },
+        {
+          "client_id": "638380778574-dub5i032lkug9ormle5639gtl0s9blus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqIsVSBybuBU0qfm3pSsUr2bGtWb1q-0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638380778574-dub5i032lkug9ormle5639gtl0s9blus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

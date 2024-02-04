@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SATHI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="css/slick.css" rel="stylesheet" />
+  <link href="css/slick-theme.css" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <style media="screen">
+    .file-input__input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+
+
+    .file-input__label {
+      cursor: pointer;
+      height: 180px;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      font-size: 14px;
+      padding: 10px 12px;
+      background-color: #ACACAC;
+    }
+
+    .file-input__label svg {
+      height: 16px;
+      margin-right: 4px;
+    }
+
+    .input-container {
+      padding-bottom: 1em;
+    }
+
+    .right-inner-addon {
+      position: relative;
+    }
+
+    .right-inner-addon input {
+      padding-right: 35px !important;
+    }
+
+    .right-inner-addon i {
+      position: absolute;
+      right: 0px;
+      padding: 12px 12px;
+      pointer-events: none;
+    }
+
+    .right-inner-addon-b {
+      position: relative;
+    }
+
+    .right-inner-addon-b input {
+      padding-right: 35px !important;
+    }
+
+    .right-inner-addon-b i {
+      position: absolute;
+      right: 0px;
+      padding: 9px 12px;
+      pointer-events: none;
+    }
+
+    input {
+      width: 100%;
+      padding: 1em !important;
+      margin: 0em !important;
+      box-sizing: border-box;
+    }
+
+    #blah {
+      display: none;
+    }
+  </style>
+  <form method="POST" id="details_form" enctype="multipart/form-data">
+    <input type="hidden" class="phone_no" name="uid">
+    <div class="file-input">
+
+      <input type="file" name="file-input" id="file-input" class="file-input__input change_img" required/>
+      <label class="file-input__label" for="file-input">
+        <img id="blah" alt="your image" style="width:50%;height:100%;border-radius:50%;" />
+        <img src="images/camera_Icon.png" style="margin: 0 auto;" alt="">
+      </label>
+
+    </div>
+
+    <div class="block login_block">
+      <div class="login_cnt pp text-start" style="margin-bottom:30px;">
+
+
+        <div class="login" style="">
+
+          <div>
+            <p style="margin-bottom:5px">Name</p>
+            <div class="right-inner-addon input-container">
+              <i><img src="images/Human_Icon.png"> </i>
+              <input type="text" name="user_name" class="form-control user_name" placeholder="Name" required/>
+            </div>
+          </div>
+          <div>
+            <p style="margin-bottom:5px">Birthday</p>
+            <div class="right-inner-addon input-container">
+              <!-- <i><img src="images/date_Icon.png"> </i> -->
+              <input type="date" name="user_dob" style="padding-right:1rem!important" class="form-control"
+                placeholder="dd-mm-yyyy" required/>
+            </div>
+          </div>
+          <!-- <div class="row" style="margin-bottom:20px">
+                          <div class="col-6">
+                            <button class="btn btn-primary" style="background:#fff;color:#ef4765;font-size:13px;"><img src="images/Male_Icon.png" style="margin-bottom:0;padding-right:8px;" class="img-fluid">Male</button>
+                          </div>
+                          <div class="col-6">
+                            <button class="btn btn-primary" style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;"><img src="images/Female_Icon.png" style="margin-bottom:0;padding-right:8px;" class="img-fluid">Female</button>
+                          </div>
+                        </div> -->
+          <div>
+            <p style="margin-bottom:5px">About Me</p>
+            <div class="right-inner-addon input-container">
+              <!-- <i><img src="images/Male_Icon.png"> </i> -->
+              <textarea class="form-control" placeholder="About Me" name="user_about" required></textarea>
+              <!-- <input type="text"name="name" placeholder="Name" /> -->
+            </div>
+          </div>
+          <p>My Hobbies</p>
+          <div class="">
+            <button type="button" class="btn btn-primary hb1"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Singing</button>
+            <button type="button" class="btn btn-primary hb2"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Dance</button>
+            <button type="button" class="btn btn-primary hb3"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Hangout</button>
+
+            <button type="button" class="btn btn-primary hb4"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">TV</button>
+            <button type="button" class="btn btn-primary hb5"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Night
+              Out</button>
+            <button type="button" class="btn btn-primary hb6"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Reading
+              Books</button>
+
+            <button type="button" class="btn btn-primary hb7"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Tattoo</button>
+
+          </div>
+          <div style="visibility: hidden;">
+            <input type="checkbox" style="width:10%;" name="hobbies[]" value="Singing" class="hobby1">Singing
+            <input type="checkbox" style="width:10%;" name="hobbies[]" value="Dance" class="hobby2">Dance
+            <input type="checkbox" style="width:10%;" name="hobbies[]" value="Hangout" class="hobby3">Hangout
+            <input type="checkbox" style="width:10%;" name="hobbies[]" value="TV" class="hobby4">TV
+            <input type="checkbox" style="width:10%;" name="hobbies[]" value="Night Out" class="hobby5">Night Out
+            <input type="checkbox" style="width:10%;" name="hobbies[]" value="Reading Books" class="hobby6">Reading Books
+            <input type="checkbox" style="width:10%;" name="hobbies[]" value="Tattoo" class="hobby7">Tattoo
+
+          </div>
+
+          <a href="home.html"class="btn btn-primary" style=" display:inline-block;width:48%;margin-right:2%;background:#fff;color:#ef4765;font-weight:600;line-height: 44px;">Skip for now</a>
+          <!-- <a href="welcome.html" style="margin-bottom:10px;display:inline-block;width:48%"><button class="btn btn-primary"
+            style="font-weight: 600;">Continue</button></a> -->
+          <button type="submit" class="btn btn-primary"
+            style="font-weight: 600;margin-bottom:10px;display:inline-block;width:48%;margin-top:3%;">Continue</button>
+  </form>
+  </div>
+  </div>
+
+
+
+  </div>
+  <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+  <script src="js/slick.js" type="text/javascript"></script>
+  <script>
+              var uid =  window.localStorage.getItem("user_id");
+              console.log(uid);
+              $('.phone_no').val(uid);
+
+    $('.con_btn').click(function () {
+      // window.location.href="add_profile.html";
+    })
+
+    function getCodeBoxElement(index) {
+      return document.getElementById('codeBox' + index);
+    }
+
+    function onKeyUpEvent(index, event) {
+      const eventCode = event.which || event.keyCode;
+      if (getCodeBoxElement(index).value.length === 1) {
+        if (index !== 4) {
+          getCodeBoxElement(index + 1).focus();
+        } else {
+          getCodeBoxElement(index).blur();
+          // Submit code
+          console.log('submit code ');
+        }
+      }
+      if (eventCode === 8 && index !== 1) {
+        getCodeBoxElement(index - 1).focus();
+      }
+    }
+
+    function onFocusEvent(index) {
+      for (item = 1; item < index; item++) {
+        const currentElement = getCodeBoxElement(item);
+        if (!currentElement.value) {
+          currentElement.focus();
+          break;
+        }
+      }
+    }
+
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          $('#blah').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $(".change_img").change(function () {
+      $('#blah').show();
+      readURL(this);
+    });
+
+    $('#details_form').on('submit', function (e) {
+      e.preventDefault();
+      var data = new FormData(this);
+      var user_name = $('.user_name').val();
+      $.ajax({
+        url: 'https://easebizz.com/projects/dating_app/admin/API/add_profile.php',
+        type: 'POST',
+        data: data,
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function (data) {
+         window.location.href = "welcome.html?user_name="+user_name;
+        }
+      });
+    })
+    $(".hb1").click(function () {
+      if ($('.hobby1').is(':checked')) {
+        $('.hobby1').prop('checked', false);
+        $('.hb1').css('color', '#ACACAC');
+        $('.hb1').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby1').prop('checked', true);
+        $('.hb1').css('color', '#ef4765');
+        $('.hb1').css('border-color', '#ef4765');
+
+      }
+    });
+
+    $(".hb2").click(function () {
+      if ($('.hobby2').is(':checked')) {
+        $('.hobby2').prop('checked', false);
+        $('.hb2').css('color', '#ACACAC');
+        $('.hb2').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby2').prop('checked', true);
+        $('.hb2').css('color', '#ef4765');
+        $('.hb2').css('border-color', '#ef4765');
+      }
+    });
+
+    $(".hb3").click(function () {
+      if ($('.hobby3').is(':checked')) {
+        $('.hobby3').prop('checked', false);
+        $('.hb3').css('color', '#ACACAC');
+        $('.hb3').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby3').prop('checked', true);
+        $('.hb3').css('color', '#ef4765');
+        $('.hb3').css('border-color', '#ef4765');
+      }
+    });
+
+    $(".hb4").click(function () {
+      if ($('.hobby4').is(':checked')) {
+        $('.hobby4').prop('checked', false);
+        $('.hb4').css('color', '#ACACAC');
+        $('.hb4').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby4').prop('checked', true);
+        $('.hb4').css('color', '#ef4765');
+        $('.hb4').css('border-color', '#ef4765');
+      }
+    });
+
+    $(".hb5").click(function () {
+      if ($('.hobby5').is(':checked')) {
+        $('.hobby5').prop('checked', false);
+        $('.hb5').css('color', '#ACACAC');
+        $('.hb5').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby5').prop('checked', true);
+        $('.hb5').css('color', '#ef4765');
+        $('.hb5').css('border-color', '#ef4765');
+      }
+    });
+
+    $(".hb6").click(function () {
+      if ($('.hobby6').is(':checked')) {
+        $('.hobby6').prop('checked', false);
+        $('.hb6').css('color', '#ACACAC');
+        $('.hb6').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby6').prop('checked', true);
+        $('.hb6').css('color', '#ef4765');
+        $('.hb6').css('border-color', '#ef4765');
+      }
+    });
+
+    $(".hb7").click(function () {
+      if ($('.hobby7').is(':checked')) {
+        $('.hobby7').prop('checked', false);
+        $('.hb7').css('color', '#ACACAC');
+        $('.hb7').css('border-color', '#ACACAC');
+      } else {
+        $('.hobby7').prop('checked', true);
+        $('.hb7').css('color', '#ef4765');
+        $('.hb7').css('border-color', '#ef4765');
+      }
+    });
+
+
+
+  </script>
+</body>
+
+</html>

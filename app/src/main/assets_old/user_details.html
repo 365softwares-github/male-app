@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medi Gate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet"/>
+    <link href="css/slick-theme.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/responsive.css" rel="stylesheet"/>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+  <!-- <div class="loader" id="loader">
+  <img src="images/loading_icon_ball.gif" class="" alt="page loder">
+</div> -->
+<style media="screen">
+  .product_img{
+    height:40vh;
+    position:relative
+  }
+  .cart a{
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+  }
+  .add_fav a{
+    background: #000;
+  }
+  .remove_fav a{
+    background: #EF4765;
+  }
+</style>
+    <div class="wrapper">
+      <div class="product_img"><img src="" class="w-100 profile_img" alt="details_img">
+        <div class="detail_btns">
+            <button class="btn btn-light"> <img src="images/call.png" alt=""> </button>
+            <button class="btn btn-light chat_rooms" style="width:70px;height:70px;background:#EF4765;border-color:#EF4765"> <img src="images/send.png" alt=""> </button>
+            <button class="btn btn-light"><img src="images/video.png" alt=""></button>
+        </div>
+      </div>
+<!-- <div class="container"> -->
+
+  <header style="position: absolute;top: 0;right: 4%;left:4%;">
+      <div class="back_arrow">
+          <a onclick="history.back()" style="background:transparent">
+              <img src="images/Back_Icon_3.png" alt="back_arrow">
+          </a>
+      </div>
+      <div class="page_head">
+          <h2></h2>
+      </div>
+      <div class="cart">
+          <a href="javascript:void(0)"><img src="images/Love_Icon_white.png" alt="cart"></a>
+      </div>
+      <!-- <div class="logo2" style="display:block!important;width:35px">
+        <a href="javascript:void(0)"><img src="images/notice.png" alt="logo"class="img-fluid"></a>
+      </div> -->
+  </header>
+    <div class="block detail_block" style="position:relative;border-radius:0;">
+
+        <div class="detail_cnt" style="padding-top:40px;">
+
+
+            <h2 class="product_name"></h2>
+            <p class="product_price"> <img src="images/bag_details.png" alt=""> &nbsp; &nbsp; &nbsp; Model Fashion</p>
+            <h3 class="product_desc_head">About Me</h3>
+            <p class="product_price about"></p>
+            <h3 class="product_desc_head">Gallery</h3>
+            <div style="text-align:center">
+              <img src="images/box1.png" class="img-fluid album1" style="margin:0 7px 10px;border-radius:10px;overflow:hidden" alt="">
+              <img src="images/box1.png" class="img-fluid album2" style="margin:0 7px 10px;border-radius:10px;overflow:hidden" alt="">
+              <img src="images/box2.png" class="img-fluid album3" style="margin:0 5px;border-radius:10px;overflow:hidden" alt="">
+              <img src="images/box2.png" class="img-fluid album4" style="margin:0 5px;border-radius:10px;overflow:hidden" alt="">
+              <img src="images/box2.png" class="img-fluid album5" style="margin:0 5px;border-radius:10px;overflow:hidden" alt="">
+
+            </div>
+          </div>
+    </div>
+<!-- </div> -->
+<nav class="footer-header" style="">
+    <!-- Left navbar links -->
+    <ul class="w-100">
+
+        <li class="">
+            <a href="home.html">
+                <div class="icon">
+                    <!-- <i class="fas fa-th-large"></i> -->
+                    <img src="images/Home_Icon.png"  >
+                </div>
+                <!-- <p>Contents</p> -->
+            </a>
+        </li>
+        <li class="">
+            <a href="chats.html">
+                <div class="icon">
+                    <!-- <i class="fa-regular fa-circle-question"></i> -->
+                    <img src="images/Chat_Icon.png" alt=""  >
+                    <!-- <i class="fa-solid fa-circle-question"></i> -->
+                </div>
+                <!-- <p>Goals</p> -->
+            </a>
+        </li>
+
+        <li class="">
+            <a class="notice" href="wishlist.html">
+                <div class="icon">
+                    <img src="images/Love_Icon.png" alt=""  >
+                </div>
+            </a>
+        </li>
+        <li class="">
+            <a class="" href="account.html">
+                <div class="icon">
+                    <img src="images/Profile_Icon.png" alt=""  >
+                    <!-- <i class="fas fa-indent"></i> -->
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+    <!-- Right navbar links -->
+
+</nav>
+</div>
+
+<div class="modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog" style="top: 50%;transform: translateY(-50%);">
+    <div class="modal-content">
+      <div class="modal-header" style="    padding: 1rem 1rem 0 0; border-bottom: none;">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="btn-close close_modal" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center" style="padding-top:0">
+        <img src="right.png" class="img-fluid" alt="">
+        <p class="success_msg" style="color:#000;font-size:16px;"></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+  <script src="sweetalert2/sweetalert2.min.js"></script>
+<script src="js/slick.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  $('.chat_rooms').click(function(){
+    // window.location.href="chat_rooms.html";
+  })
+</script>
+<script type="text/javascript">
+$(document).on('click','.logo2',function () {
+  // $('.sagest_box').css('top','0');
+  $('.sagest_box').fadeToggle('slow');
+})
+
+
+var getQueryString = function (field, url) {
+      var href = url ? url : window.location.href;
+      var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
+      var string = reg.exec(href);
+      return string ? string[1] : null;
+
+    };
+
+    var female_id = getQueryString('id'); // returns 'chicken'
+    var female_ph = getQueryString('phone'); // returns 'chicken'
+  var uid =  window.localStorage.getItem("user_id");
+  // alert(uid);
+  $.ajax({
+  url: 'https://easebizz.com/projects/dating_app/admin/API/token_genaration.php?uid='+uid,
+  type:'GET',
+  dataType : 'json',
+  success:function(data){
+
+  }
+  })
+  $('.cart').attr('data-id',female_id);
+    $.ajax({
+    url: 'https://easebizz.com/projects/dating_app/admin/API/check_wishlist_female.php?female_id='+female_id+'&user_id='+uid,
+    type:'GET',
+    dataType : 'json',
+    success:function(data){
+      $('.cart').addClass(data.class);
+      // $('.modal').modal('show');
+    }
+    })
+    $(document).on('click','.add_fav',function(){
+    var female_id = $(this).data('id');
+    var data = {'uid' : uid,'female_id':female_id}
+    console.log(data);
+    $(this).addClass('remove_fav');
+    $(this).removeClass('add_fav');
+    $.ajax({
+    url: 'https://easebizz.com/projects/dating_app/admin/API/add_wishlist_female.php',
+    type:'POST',
+    data:data,
+    success:function(data){
+      $('.success_msg').html('Added to wishlist');
+      $('.modal').modal('show');
+    }
+    })
+    })
+    $(document).on('click','.remove_fav',function(){
+    var female_id = $(this).data('id');
+    var data = {'uid' : uid,'female_id':female_id}
+    console.log(data);
+    $(this).removeClass('remove_fav');
+    $(this).addClass('add_fav');
+    $.ajax({
+    url: 'https://easebizz.com/projects/dating_app/admin/API/delete_wishlist.php',
+    type:'POST',
+    data:data,
+    success:function(data){
+    $('.success_msg').html('Removed to wishlist');
+    $('.modal').modal('show');
+    }
+    })
+    })
+    $('.chat_rooms').click(function(){
+    window.location.href="chat_rooms.html?id="+female_ph;
+  })
+    $.ajax({
+  url: 'https://easebizz.com/projects/dating_app/admin/API/get_single_female.php?user_id='+female_id,
+  type:'GET',
+  dataType:'json',
+  success:function(data){
+    $('.about').html(data[0]['user_about']);
+    $('.product_name').html(data[0]['user_name']);
+    var url = "https://easebizz.com/projects/dating_app/admin/female_profile_image/";
+    var url2 = "https://easebizz.com/projects/dating_app/admin/female_album/";
+
+    var ph = data[0]['phone_no'];
+    var img_ext = data[0]['profile_img'];
+    var img = url+ph+'.'+img_ext;
+    $('.profile_img').attr('src',img);
+
+    var album_ext1 = data[0]['album_photo1'];
+    var album_img1 = url2+ph+'_a.'+album_ext1;
+    $('.album1').attr('src',album_img1);
+
+    var album_ext2 = data[0]['album_photo2'];
+    var album_img2 = url2+ph+'_b.'+album_ext2;
+    $('.album2').attr('src',album_img2);
+
+    var album_ext3 = data[0]['album_photo3'];
+    var album_img3 = url2+ph+'_c.'+album_ext3;
+    $('.album3').attr('src',album_img3);
+
+    var album_ext4 = data[0]['album_photo4'];
+    var album_img4 = url2+ph+'_a.'+album_ext4;
+    $('.album4').attr('src',album_img4);
+
+    var album_ext5 = data[0]['album_photo5'];
+    var album_img5 = url2+ph+'_a.'+album_ext5;
+    $('.album5').attr('src',album_img5);
+
+
+  }
+})
+</script>
+</body>
+</html>

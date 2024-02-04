@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  <!-- IonIcons -->
+  <!-- date picker -->
+  <!-- dataTables -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
+  </head>
+<body style="">
+<!-- <style media="screen">
+  background-image:url(animated_png_intro.png);background-size:cover;
+</style> -->
+<style media="screen">
+  .modal-dialog{
+    top: 50%;
+    transform: translateY(-50%)!important;
+  }
+</style>
+<div style="position:fixed;top:0;left:0;right:0;bottom:0; ">
+  <img src="images/Delivering_Life.gif"style="max-width:100%;height:auto"  alt="">
+  <!-- <p style="position:fixed;bottom:0;color:#fff">Developed by <br><img src="images/html.png" style="height:12px"> 365softwares </p> -->
+</div>
+
+<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="padding:15px 10px;">
+      <div class="modal-header" style="border:0;border-radius:0;padding:0">
+        <button type="button" class="close close_modal_3" data-dismiss="modal"
+                style="display:none">&times;</button>
+        <h6 class="modal-title" style="font-size:14px;"><b>Update Medigate</b></h6>
+      </div>
+      <div class="modal-body" style="padding:0;padding-top:5px">
+        <p style="font-size:12px;padding-bottom: 15px;font-weight:500">Medigate recommend you to update your application to
+          avail all latest functionality.</p>
+      </div>
+      <div class="modal-footer" style="border:0;padding:0">
+        <button type="button" class="app_link btn btn-success"
+                style="border:0;position:relative;right:1%;border-radius:0;padding:4px 8px;font-size:14px;font-weight:600;background:#198754!important">UPDATE</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+  <script>
+  var getQueryString = function (field, url) {
+    var href = url ? url : window.location.href;
+    var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
+    var string = reg.exec(href);
+    return string ? string[1] : null;
+  };
+
+
+            //  var ver_code = 1; // returns 'chicken'
+      var ver_code = getQueryString('ver_code'); // returns 'chicken'
+              if(ver_code != null){
+              $.ajax({
+                  url: 'https://medigateonline.com/erp/API/get_app_version.php',
+                  type: 'GET',
+                  dataType: 'json',
+                  success: function (data) {
+                      var vid = data[0]['update_link'];
+                      if (ver_code != vid) {
+                        console.log(vid);
+                          $('.modal').modal('show');
+                            // $('.modal').modal({ backdrop: 'static', keyboard: false });
+                          $('.app_link').click(function () {
+                              var app_link = "https://play.google.com/store/search?q=Medigate&c=apps";
+                              window.open(app_link, "_blank");
+                          })
+                      }else {
+                        setTimeout(function() {
+                      window.location.href = "home.html";
+                      // console.log('pp');
+                      }, 2500);
+                      }
+                  }
+
+              })
+  }
+
+    $(function () {
+  //   setTimeout(function() {
+  // // window.location.href = "home.html";
+  // // console.log('pp');
+  // }, 2500);
+  });
+  </script>
+  </body>

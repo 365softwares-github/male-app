@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SATHI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="css/slick.css" rel="stylesheet" />
+  <link href="css/slick-theme.css" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+        <div class="back_arrow">
+            <a onclick="history.back()">
+                <img src="images/back_arrow.png" alt="back_arrow">
+            </a>
+        </div>
+        <div class="page_head">
+            <h2>Add Hobbies</h2>
+        </div>
+        <div class="cart">
+            <a href="account.html"><img src="images/menu.png" alt="cart"></a>
+        </div>
+        <div class="logo2" style="display:block!important;width:35px">
+          <a href="javascript:void(0)"><img src="images/notice.png" alt="logo"class="img-fluid"> <span>5</span> </a>
+        </div>
+    </header>
+    <div style="">
+        <ul class="sagest_box">
+          <li >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          <li >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          <li >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+        </ul>
+    </div>
+  </div>
+  <style media="screen">
+    .file-input__input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+
+
+    .file-input__label {
+      cursor: pointer;
+      height: 180px;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      font-size: 14px;
+      padding: 10px 12px;
+      background-color: #ACACAC;
+    }
+
+    .file-input__label svg {
+      height: 16px;
+      margin-right: 4px;
+    }
+
+    .input-container {
+      padding-bottom: 1em;
+    }
+
+    .right-inner-addon {
+      position: relative;
+    }
+
+    .right-inner-addon input {
+      padding-right: 35px !important;
+    }
+
+    .right-inner-addon i {
+      position: absolute;
+      right: 0px;
+      padding: 12px 12px;
+      pointer-events: none;
+    }
+
+    .right-inner-addon-b {
+      position: relative;
+    }
+
+    .right-inner-addon-b input {
+      padding-right: 35px !important;
+    }
+
+    .right-inner-addon-b i {
+      position: absolute;
+      right: 0px;
+      padding: 9px 12px;
+      pointer-events: none;
+    }
+
+    input {
+      width: 100%;
+      padding: 1em !important;
+      margin: 0em !important;
+      box-sizing: border-box;
+    }
+
+    #blah {
+      display: none;
+    }
+  </style>
+  <form method="POST" id="details_form" enctype="multipart/form-data">
+    <input type="hidden" class="phone_no" name="uid">
+
+
+    <div class="block login_block">
+      <div class="login_cnt pp text-start" style="margin-bottom:30px;">
+
+
+        <div class="login" style="">
+
+
+
+          <!-- <div class="row" style="margin-bottom:20px">
+                          <div class="col-6">
+                            <button class="btn btn-primary" style="background:#fff;color:#ef4765;font-size:13px;"><img src="images/Male_Icon.png" style="margin-bottom:0;padding-right:8px;" class="img-fluid">Male</button>
+                          </div>
+                          <div class="col-6">
+                            <button class="btn btn-primary" style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;"><img src="images/Female_Icon.png" style="margin-bottom:0;padding-right:8px;" class="img-fluid">Female</button>
+                          </div>
+                        </div> -->
+
+          <p>My Hobbies</p>
+          <div class="">
+            <button type="button" class="btn btn-primary hobbi_btn Singing" value="Singing"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Singing</button>
+            <button type="button" class="btn btn-primary hobbi_btn Dance" value="Dance"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Dance</button>
+            <button type="button" class="btn btn-primary hobbi_btn Hangout" value="Hangout"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Hangout</button>
+
+            <button type="button" class="btn btn-primary hobbi_btn TV" value="TV"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">TV</button>
+            <button type="button" class="btn btn-primary hobbi_btn Night" value="Night Out"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Night
+              Out</button>
+            <button type="button" class="btn btn-primary hobbi_btn Reading" value="Reading Books"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Reading Books</button>
+
+            <button type="button" class="btn btn-primary hobbi_btn Tattoo" value="Tattoo"
+              style="background:#fff;color:#ACACAC;border-color:#ACACAC;font-size:13px;display:inline;min-width: 21%;margin-bottom:15px;margin-right:2px;width:auto;">Tattoo</button>
+
+          </div>
+          <div class="hobbies_val">
+
+          </div>
+
+
+          <!-- <a href="welcome.html" style=" display:inline-block;width:48%;margin-right:2%;"><button
+              class="btn btn-primary" style="background:#fff;color:#ef4765;font-weight:600;">Skip for now</button></a> -->
+          <!-- <a href="welcome.html" style="margin-bottom:10px;display:inline-block;width:48%"><button class="btn btn-primary"
+            style="font-weight: 600;">Continue</button></a> -->
+          <button type="submit" class="btn btn-primary"
+            style="font-weight: 600;margin-bottom:10px;display:inline-block;width:100%;margin-top:3%;">Continue</button>
+  </form>
+  </div>
+  </div>
+
+<style media="screen">
+  .selected{
+    color: #ef4765!important;
+    border-color: #ef4765!important;
+  }
+</style>
+
+  </div>
+  <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+  <script src="js/slick.js" type="text/javascript"></script>
+  <script>
+  $(document).on('click','.hobbi_btn',function () {
+    var val = $(this).val();
+    $(this).addClass('selected');
+    $(this).removeClass('hobbi_btn');
+    if(val == 'Reading Books'){
+      var val2 = 'Reading';
+    }else if (val == 'Night Out') {
+        var val2 = 'Night';
+    }else{
+      var val2 = val;
+    }
+    $('.hobbies_val').append('<input type="hidden" name="hobbies[]" class="hobbies_' + val2 + ' hobbies_input" value="' + val + '">');
+    var cls = ".off_hobbies_" + val2;
+    $(cls).val('');
+  })
+  $(document).on('click','.selected',function () {
+    var val = $(this).val();
+    $(this).removeClass('selected');
+      $(this).addClass('hobbi_btn');
+    if(val == 'Reading Books'){
+      var val2 = 'Reading';
+    }else if (val == 'Night Out') {
+        var val2 = 'Night';
+    }else{
+      var val2 = val;
+    }
+    $('.hobbies_val').append('<input type="hidden" name="off_hobbies[]" class="off_hobbies_' + val2 + ' hobbies_input" value="' + val + '">');
+
+    var cls = ".hobbies_" + val2;
+    $(cls).val('');
+  })
+  var uid = window.localStorage.getItem("user_id");
+  $('.user_id').val(uid);
+  $.ajax({
+url: 'https://easebizz.com/projects/dating_app/admin/API/get_user_hoby.php?user_id='+uid,
+type:'GET',
+dataType:'json',
+success:function(data){
+  console.log(data);
+  if(data == null){
+    $('.err').html('No data found');
+  }
+  for (var i = 0; i < data.length; i++) {
+
+    var row = $('');
+
+    if(data[i].hoby_name == 'Night Out'){
+      var cls2 = '.Night';
+    }else if (data[i].hoby_name == 'Reading Books') {
+          var cls2 = '.Reading';
+    }else {
+      var cls2 = '.'+data[i].hoby_name;
+    }
+    $(cls2).addClass('selected');
+      $(cls2).removeClass('hobbi_btn');
+    // $(cls2).css('color','#ef4765');
+    // $(cls2).css('border-color','#ef4765');
+
+    // $('.females').append(row);
+  }
+
+}
+})
+  $(document).on('click','.logo2',function () {
+    // $('.sagest_box').css('top','0');
+    $('.sagest_box').fadeToggle('slow');
+  })
+              var uid =  window.localStorage.getItem("user_id");
+              console.log(uid);
+              $('.phone_no').val(uid);
+
+    $('.con_btn').click(function () {
+      // window.location.href="add_profile.html";
+    })
+
+
+
+
+
+
+
+
+
+    $('#details_form').on('submit', function (e) {
+      e.preventDefault();
+      var data = new FormData(this);
+      // console.log(data);
+      $.ajax({
+        url: 'https://easebizz.com/projects/dating_app/admin/API/add_hobbies.php',
+        type: 'POST',
+        data: data,
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function (data) {
+         window.location.href = "my_profile.html";
+        }
+      });
+    })
+
+
+
+    // $(".hb2").click(function () {
+    //   if ($('.hobby2').is(':checked')) {
+    //     $('.hobby2').prop('checked', false);
+    //     $('.hb2').css('color', '#ACACAC');
+    //     $('.hb2').css('border-color', '#ACACAC');
+    //   } else {
+    //     $('.hobby2').prop('checked', true);
+    //     $('.hb2').css('color', '#ef4765');
+    //     $('.hb2').css('border-color', '#ef4765');
+    //   }
+    // });
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

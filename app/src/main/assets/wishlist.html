@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SATHI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet" />
+    <link href="css/slick-theme.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<style media="screen">
+
+.left-inner-addon {
+  position: relative;
+}
+.left-inner-addon input {
+  padding-left: 35px !important;
+}
+.left-inner-addon i {
+  position: absolute;
+  top: 50%;
+  padding-left: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+input {
+    width: 100%;
+		padding: 1em !important;
+		margin: 0em !important;
+		box-sizing: border-box;
+}
+</style>
+<body style="background: #fff;">
+    <div class="wrapper" style="">
+
+      <div class="container">
+        <header>
+            <div class="back_arrow">
+                <a onclick="history.back()">
+                    <img src="images/back_arrow.png" alt="back_arrow">
+                </a>
+            </div>
+            <div class="page_head">
+                <h2>My Favourite</h2>
+            </div>
+            <div class="cart">
+                <a href="account.html"><img src="images/menu.png" alt="cart"></a>
+            </div>
+            <div class="logo2" style="display:block!important;width:35px">
+              <a href="javascript:void(0)"><img src="images/notice.png" alt="logo"class="img-fluid"> <span>5</span> </a>
+            </div>
+        </header>
+        <div style="">
+            <ul class="sagest_box">
+              <li >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            </ul>
+        </div>
+        <div class="row" style="margin-bottom:15px;">
+          <div class="col-12" style="padding:0 7px">
+            <div>
+        <div class="left-inner-addon input-container">
+            <i> <img src="images/Search_Icon.png" alt=""> </i>
+            <input type="text" class="form-control search_input"placeholder="Search" />
+        </div>
+    </div>
+          </div>
+          <div style="">
+              <ul class="search_sagest_box">
+
+              </ul>
+          </div>
+        </div>
+        <div class="row females" style="align-items:center">
+      <h6 class="err text-center"></h6>
+
+
+
+
+        </div>
+
+      </div>
+
+      <nav class="footer-header" style="">
+          <!-- Left navbar links -->
+          <ul class="w-100">
+
+              <li class="">
+                  <a href="home.html">
+                      <div class="icon">
+                          <!-- <i class="fas fa-th-large"></i> -->
+                          <img src="images/Home_Icon.png"  >
+                      </div>
+                      <!-- <p>Contents</p> -->
+                  </a>
+              </li>
+              <li class="">
+                  <a href="chats.html">
+                      <div class="icon">
+                          <!-- <i class="fa-regular fa-circle-question"></i> -->
+                          <img src="images/Chat_Icon.png" alt=""  >
+                          <!-- <i class="fa-solid fa-circle-question"></i> -->
+                      </div>
+                      <!-- <p>Goals</p> -->
+                  </a>
+              </li>
+
+              <li class="">
+                  <a class="notice" href="wishlist.html">
+                      <div class="icon">
+                          <img src="images/Love_Icon.png" alt=""  >
+                      </div>
+                  </a>
+              </li>
+              <li class="">
+                  <a class="" href="account.html">
+                      <div class="icon">
+                          <img src="images/Profile_Icon.png" alt=""  >
+                          <!-- <i class="fas fa-indent"></i> -->
+                      </div>
+                  </a>
+              </li>
+
+          </ul>
+
+          <!-- Right navbar links -->
+
+      </nav>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" style="top: 50%;transform: translateY(-50%);">
+    <div class="modal-content">
+      <div class="modal-header" style="border:none;padding-bottom:0">
+        <h5 class="modal-title" id="staticBackdropLabel">Pending Requests</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="mymodal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog" style="top: 50%;transform: translateY(-50%);">
+    <div class="modal-content">
+      <div class="modal-header" style="    padding: 1rem 1rem 0 0; border-bottom: none;">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="btn-close close_modal" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center" style="padding-top:0">
+        <img src="right.png" class="img-fluid" alt="">
+        <p style="color:#000;font-size:16px;">Remove from wishlist</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="js/slick.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <script src="sweetalert2/sweetalert2.min.js"></script>
+    <script type="text/javascript">
+    $(document).on('click','.logo2',function () {
+      // $('.sagest_box').css('top','0');
+      $('.sagest_box').fadeToggle('slow');
+    })
+
+    var uid =  window.localStorage.getItem("user_id");
+    if(uid == null){
+      window.location.href="main.html";
+    }
+    $(document).on('keyup','.search_input',function(){
+     var val = $(this).val();
+     if (val == '') {
+     $('.search_sagest_box').css('display','none');
+    }else {
+     $.ajax({
+          url : 'https://easebizz.com/projects/dating_app/admin/API/get_search_data_wishlist.php',
+          type : "POST",
+          data: {val:val,user_id:uid},
+          dataType : 'json',
+          success : function(data){
+            $('.search_sagest_box').html("");
+            $('.search_sagest_box').css('display','block');
+            if (data.status == false) {
+              $('.search_sagest_box').html("");
+              // $('.search_sagest_box').append('<li>'+data.message+'</li>');
+               $('.search_sagest_box').append("<li class='text-danger'>We cannot find what you are looking for.Please check your search query</li>");
+             }else{
+               for (var i = 0; i < data.length; i++) {
+
+
+                 var row = $('<li><a href="user_details.html?id=' + data[i].female_id + '&phone='+ data[i].phone_no +'" style="color:#000">' + data[i].user_name+ '</a></li>');
+                 $('.search_sagest_box').append(row);
+               }
+             }
+
+          }})
+        }
+    })
+    $.ajax({
+  url: 'https://easebizz.com/projects/dating_app/admin/API/get_wishlist.php?uid='+uid,
+  type:'GET',
+  dataType:'json',
+  success:function(data){
+    console.log(data);
+    if(data == null){
+      $('.err').html('No data found');
+    }
+    for (var i = 0; i < data.length; i++) {
+
+      var row = $('<div class="col-6" style="padding:0 7px;margin-bottom:15px"><div class="product_cnt"><img src="'+data[i].img+'"  style="width:171px;height:230px;border-radius:10px;" alt="product-img"><h6>'+data[i].uname+', '+data[i].age+'</h6><a class="view" href="user_details.html?id='+data[i].id+'&phone='+data[i].phone+'"><i class="fav_icon"><img src="images/view_eye.png" alt="fav"></i></a><a class="add_cart remove_fav" data-id="'+data[i].id+'"><i class="plus_icon"><img src="images/wishlist_Icon.png" alt="plus"></i></a></div></div>');
+
+      $('.females').append(row);
+    }
+    $('.remove_fav').click(function(){
+  var female_id = $(this).data('id');
+  var data = {'uid' : uid,'female_id':female_id}
+  console.log(data);
+  $.ajax({
+    url: 'https://easebizz.com/projects/dating_app/admin/API/delete_wishlist.php',
+    type:'POST',
+    data:data,
+    success:function(data){
+      $('#mymodal').modal('show');
+    }
+  })
+})
+  }
+})
+
+
+$('.close_modal').click(function(){
+  window.location.href="";
+})
+
+    </script>
+</body>
+
+</html>

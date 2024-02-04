@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medi Gate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
+    <link href="css/slick.css" rel="stylesheet"/>
+    <link href="css/slick-theme.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/responsive.css" rel="stylesheet"/>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+  <style media="screen">
+    .suppor_ticket input{
+      /* border: none; */
+      border: 1px solid #ACACAC;
+      font-size: 12px;
+      padding: .75rem;
+      outline: 0!important;
+    }
+    .form-control:focus{
+      border-color: #ced4da;
+      box-shadow:none;
+    }
+    .suppor_ticket textarea{
+      border: none;
+      font-size: 12px;
+      border: 1px solid #ACACAC;
+      /* border-radius: 0px; */
+      outline: 0!important;
+    }
+  </style>
+    <div class="wrapper">
+<div class="container">
+  <header>
+      <div class="back_arrow">
+          <a onclick="history.back()">
+              <img src="images/back_arrow.png" alt="back_arrow">
+          </a>
+      </div>
+      <div class="page_head">
+          <h2>Contact Us</h2>
+      </div>
+      <div class="cart">
+          <a href="account.html"><img src="images/menu.png" alt="cart"></a>
+      </div>
+      <div class="logo2" style="display:block!important;width:35px">
+        <a href="javascript:void(0)"><img src="images/notice.png" alt="logo"class="img-fluid"> <span>5</span> </a>
+      </div>
+  </header>
+  <div style="">
+      <ul class="sagest_box">
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+      </ul>
+  </div>
+
+    <div class="block help_block">
+        <div class="address_cnt">
+            <!-- <h6>Request for support</h6> -->
+            <form class="suppor_ticket">
+              <p style="color:#ACACAC;font-size:13px;margin-bottom:10px;">Subject</p>
+              <input type="hidden" name="user_id" class="user_id" value="">
+              <input type="hidden" name="send_by" class="" value="M">
+              <input type="text" name="subject" placeholder="I'm here when you need a sunny day,something "class="form-control" required value=""> <br>
+            <!-- <br> -->
+              <p style="color:#ACACAC;font-size:13px;margin-bottom:10px;">Message</p>
+              <textarea name="message" rows="4" class="form-control" placeholder="I'm here when you need a sunny day,something good. We can sing together on the beach and burn bonfires at night with the moonlight." required></textarea> <br>
+              <button type="submit" name="button" class="btn btn-primary w-100" style="font-weight:600;padding:10px">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<nav class="footer-header" style="">
+    <!-- Left navbar links -->
+    <ul class="w-100">
+
+        <li class="">
+            <a href="home.html">
+                <div class="icon">
+                    <!-- <i class="fas fa-th-large"></i> -->
+                    <img src="images/Home_Icon.png"  >
+                </div>
+                <!-- <p>Contents</p> -->
+            </a>
+        </li>
+        <li class="">
+            <a href="chats.html">
+                <div class="icon">
+                    <!-- <i class="fa-regular fa-circle-question"></i> -->
+                    <img src="images/Chat_Icon.png" alt=""  >
+                    <!-- <i class="fa-solid fa-circle-question"></i> -->
+                </div>
+                <!-- <p>Goals</p> -->
+            </a>
+        </li>
+
+        <li class="">
+            <a class="notice" href="wishlist.html">
+                <div class="icon">
+                    <img src="images/Love_Icon.png" alt=""  >
+                </div>
+            </a>
+        </li>
+        <li class="">
+            <a class="" href="account.html">
+                <div class="icon">
+                    <img src="images/Profile_Icon.png" alt=""  >
+                    <!-- <i class="fas fa-indent"></i> -->
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+    <!-- Right navbar links -->
+
+</nav>
+    </div>
+
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/slick.js" type="text/javascript"></script>
+<script src="sweetalert2/sweetalert2.min.js"></script>
+<script src="js/menu_link.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).on('click','.logo2',function () {
+  // $('.sagest_box').css('top','0');
+  $('.sagest_box').fadeToggle('slow');
+})
+var uid =  window.localStorage.getItem("user_id");
+$('.user_id').val(uid);
+$(document).on('submit','.suppor_ticket', function (e) {
+  e.preventDefault();
+  var data = new FormData(this);
+  $.ajax({
+    url: 'https://easebizz.com/projects/dating_app/admin/API/suppor_ticket.php',
+    type: 'POST',
+    data: data,
+    contentType: false,
+    cache: false,
+    processData: false,
+    success: function (data) {
+      Swal.fire({
+             position: 'top-center',
+             icon: 'success',
+             title: 'Success',
+             showConfirmButton: false,
+             timer: 3000
+           });
+           setTimeout(function() {
+  window.location.href = "";
+}, 2500);
+     // window.location.href = "welcome.html";
+    }
+  });
+
+})
+</script>
+</body>
+</html>

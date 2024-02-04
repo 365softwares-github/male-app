@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SATHI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="css/slick.css" rel="stylesheet" />
+  <link href="css/slick-theme.css" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<style media="screen">
+  .login_block {
+    padding-top: 25%;
+  }
+</style>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <a onclick="history.back()">
+            <img src="images/back_arrow.png" alt="back_arrow">
+          </a>
+        </div>
+        <div class="col-6">
+
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <div class="block login_block">
+    <div class="login_cnt pp" style="margin-bottom:30px;">
+      <style media="screen">
+        .passcode-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: auto;
+          margin: 0 auto;
+        }
+
+        .passcode-wrapper input {
+          width: 50px;
+          height: 50px;
+          padding: 0;
+          margin-right: 5px;
+          text-align: center;
+          border: 1px solid gray;
+          border-radius: 5px;
+        }
+
+        .passcode-wrapper input:last-child {
+          margin-right: 0;
+        }
+
+        .passcode-wrapper input::-webkit-inner-spin-button,
+        .passcode-wrapper input::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          appearance: none;
+          margin: 0;
+        }
+
+        .passcode-wrapper input:focus,
+        .passcode-wrapper input.focus {
+          border-color: green;
+          outline: none;
+          box-shadow: none;
+        }
+      </style>
+      <p style="margin-bottom:0;">Please enter the 4 digit OTP<br> sent to <span class="ph"></span></p>
+      <span class="err text-danger" style="margin-bottom:10px;display:block"></span>
+      <div class="login" style="bor;padding:5px 15px;">
+<h6>OTP :<span class="otp_is"></span></h6>
+        <div class="form-group">
+          <label for="password" class="text-white">Enter 4 Digit Password</label>
+          <div class="passcode-wrapper">
+            <input id="codeBox1" type="number" maxlength="1" onkeyup="onKeyUpEvent(1, event)"
+              onfocus="onFocusEvent(1)">
+            <input id="codeBox2" type="number" maxlength="1" onkeyup="onKeyUpEvent(2, event)"
+              onfocus="onFocusEvent(2)">
+            <input id="codeBox3" type="number" maxlength="1" onkeyup="onKeyUpEvent(3, event)"
+              onfocus="onFocusEvent(3)">
+            <input id="codeBox4" type="number" maxlength="1" onkeyup="onKeyUpEvent(4, event)"
+              onfocus="onFocusEvent(4)">
+          </div>
+        </div>
+        <!-- <input type="number" name="phone" id=""class="phone" placeholder="Phone Number" style="color:#000"> -->
+        <!-- <input type="submit" value="Send" class="btn btn-primary"> -->
+      </div>
+    </div>
+
+    <div class="login_cnt pp2" style="margin-bottom:;">
+      <!-- <form class="login2" > -->
+      <p style="">Don't tell anyone the code <br>Expiring In <span id="time">05:00</span></p>
+      <!-- <span class="err text-danger" style="margin-bottom:10px;display:block"></span>
+              <input type="phone" name="otp" id=""class="otp form-control" placeholder="1234567890" style="color:#000"> -->
+      <p class="text-danger resend">RESEND OTP</p>
+      <!-- <div class="input-container">
+    <img src="images/Phone_icon.png" alt="">
+    <input class="input-field" type="text" placeholder="Username" name="usrnm">
+  </div> -->
+      <!-- <input type="submit" value="Accept" class="btn btn-primary con_btn"> -->
+      <button class="btn btn-primary con_btn login">Accept</button>
+      <!-- </form> -->
+    </div>
+
+  </div>
+  <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+  <script src="js/slick.js" type="text/javascript"></script>
+  <script>
+    // $('.con_btn').click(function () {
+    //   window.location.href = "add_profile.html";
+    // })
+
+    function getCodeBoxElement(index) {
+      return document.getElementById('codeBox' + index);
+    }
+
+    function onKeyUpEvent(index, event) {
+      const eventCode = event.which || event.keyCode;
+      if (getCodeBoxElement(index).value.length === 1) {
+        if (index !== 4) {
+          getCodeBoxElement(index + 1).focus();
+        } else {
+          getCodeBoxElement(index).blur();
+          // Submit code
+          console.log('submit code ');
+        }
+      }
+      if (eventCode === 8 && index !== 1) {
+        getCodeBoxElement(index - 1).focus();
+      }
+    }
+
+    function onFocusEvent(index) {
+      for (item = 1; item < index; item++) {
+        const currentElement = getCodeBoxElement(item);
+        if (!currentElement.value) {
+          currentElement.focus();
+          break;
+        }
+      }
+    }
+
+    var getQueryString = function (field, url) {
+      var href = url ? url : window.location.href;
+      var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
+      var string = reg.exec(href);
+      return string ? string[1] : null;
+
+    };
+
+    var phone_no = getQueryString('phone_no'); // returns 'chicken'
+    var type = getQueryString('type'); // returns 'chicken'
+$('.ph').text(phone_no);
+$.ajax({
+  url: 'https://easebizz.com/projects/dating_app/admin/API/get_user_otp.php?ph_no='+phone_no,
+  type:'GET',
+  dataType:'json',
+  success:function(data){
+console.log(data);
+$('.otp_is').text(data[0]['otp_no']);
+  }
+})
+    $(".login").click(function () {
+      var otp1 = $('#codeBox1').val();
+      var otp2 = $('#codeBox2').val();
+      var otp3 = $('#codeBox3').val();
+      var otp4 = $('#codeBox4').val();
+      var otp = otp1 + otp2 + otp3 + otp4;
+      var data = {
+        'phone_no': phone_no,
+        'otp_no': otp
+      }
+      $.ajax({
+        url: 'https://easebizz.com/projects/dating_app/admin/API/login.php',
+        type: 'POST',
+        data: data,
+        success: function (data) {
+          var msg = data;
+          console.log(msg);
+          if (msg == "FAILD") {
+            $('.err').html('Wrong OTP');
+          } else if (type == "new_user") {
+            window.localStorage.setItem("user_id", msg);
+            window.location.href = "add_profile.html";
+          } else {
+            window.localStorage.setItem("user_id", msg);
+            console.log(window.localStorage.getItem("user_id"));
+            window.location.href = "home.html";
+          }
+
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          alert('Error: ' + textStatus + ' - ' + errorThrown);
+        }
+      });
+
+    })
+
+    $(".resend").click(function () {
+            var getQueryString = function (field, url) {
+                var href = url ? url : window.location.href;
+                var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
+                var string = reg.exec(href);
+                return string ? string[1] : null;
+            }
+            var phone_no = getQueryString('phone_no'); // returns 'chicken'
+
+            var phone = phone_no;
+            //console.log(phone_no);
+            $.ajax({
+              url: 'https://easebizz.com/projects/dating_app/admin/API/signup_male_user.php',
+                type: 'POST',
+                data: { 'phone_no': phone },
+                success: function (data) {
+                    window.location.href = "";
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert('Error: ' + textStatus + ' - ' + errorThrown);
+                }
+            });
+        });
+
+
+
+        function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 * 5,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+};
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
